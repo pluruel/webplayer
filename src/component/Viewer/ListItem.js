@@ -5,7 +5,8 @@ import styled, { css } from "styled-components";
 const ThumbNail = styled.div`
   background: black;
   justify-items: center;
-  width: 128px;
+  width: 120px;
+  height: 67.5px;
 `;
 
 const StyledItem = styled.div`
@@ -13,9 +14,9 @@ const StyledItem = styled.div`
   cursor: pointer;
   display: flex;
   font-size: 1rem;
-  height: 72px
+  margin: 0.5rem;
   justify-items: center;
-  padding: 0.5rem;
+  padding: 1rem;
   .description {
     margin-left: auto;
     justify-content: space-between;
@@ -23,7 +24,9 @@ const StyledItem = styled.div`
       display: flex;
     }
   }
-
+  &:hover {
+    background: #eeeeee;
+  }
   & + & {
     border-top: 1px solid black;
   }

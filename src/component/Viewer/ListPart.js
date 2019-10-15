@@ -21,10 +21,10 @@ const ListPart = ({ lists }) => {
     <Lists>
       <List
         className="List"
-        width={250}
+        width={267}
         height={600}
         rowCount={lists.length}
-        rowHeight={100}
+        rowHeight={120}
         rowRenderer={rowRenderer}
         list={lists}
         style={{
