@@ -1,6 +1,6 @@
-import React from 'react';
-import { MdAdd } from 'react-icons/md';
-import styled, { css } from 'styled-components';
+import React from "react";
+import { MdAdd } from "react-icons/md";
+import styled, { css } from "styled-components";
 
 const ThumbNail = styled.div`
   background: black;
@@ -9,7 +9,6 @@ const ThumbNail = styled.div`
 `;
 
 const StyledItem = styled.div`
-  border: 2px solid #eeeeee;
   color: black;
   cursor: pointer;
   display: flex;
