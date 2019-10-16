@@ -41,7 +41,7 @@ const ListItem = ({ todo, onClick, style }) => {
         <div className="description">
           <div className="text" onClick={onClick}></div>
           <div>{descrpition}</div>
-          <div> {text}</div>
+          <div>{text}</div>
         </div>
       </StyledItem>
     </div>

@@ -1,16 +1,16 @@
-import React, { useReducer, useRef, useCallback } from 'react';
-import ListTemplate from '../component/Viewer/ListTemplate';
-import ListPart from '../component/Viewer/ListPart';
-import ViewerTemplate from '../component/Viewer/ViewerTemplate';
-import styled from 'styled-components';
-import './ViewerPage.scss';
+import React, { useReducer, useRef, useCallback } from "react";
+import ListTemplate from "../component/Viewer/ListTemplate";
+import ListPart from "../component/Viewer/ListPart";
+import ViewerTemplate from "../component/Viewer/ViewerTemplate";
+import styled from "styled-components";
+import "./ViewerPage.scss";
 function createLists() {
   const arr = [];
   for (let i = 1; i <= 5; ++i) {
     arr.push({
       id: i,
       text: `Step ${i}`,
-      descrpition: `this is ${i}`,
+      descrpition: `this is ${i}`
     });
   }
   return arr;

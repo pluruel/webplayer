@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import { Player } from "video-react";
 
@@ -16,14 +16,32 @@ function e(c) {
 
 const Square = styled.div`
   background: black;
-  height: calc(${w}px * (9 / 16));
   justify-content: center;
   margin: 1.5rem;
-  width: ${w}px;
 `;
 
-const ViewerTemplate = () => {
-  return <Square />;
-};
+class ViewerTemplate extends Component {
+  state = { width: w, height: w * (9 / 16) };
+  componentDidMount() {
+    window.addEventListener("resize", this.resize);
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.resize);
+  }
+  resize = () => {
+    this.setState({
+      width: window.innerWidth - 350,
+      height: window.innerHeight
+    });
+  };
+  render() {
+    console.log("sdddd" + this.state.width);
+    return (
+      <Square
+        style={{ height: this.state.width * (9 / 16), width: this.state.width }}
+      />
+    );
+  }
+}
 
 export default ViewerTemplate;
