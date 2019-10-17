@@ -31,15 +31,15 @@ const StyledItem = styled.div`
     border-top: 1px solid black;
   }
 `;
-const ListItem = ({ todo, onClick, style }) => {
-  const { id, text, descrpition } = todo;
+const ListItem = ({ movie, onToggle, style }) => {
+  const { id, text, descrpition, url } = movie;
   return (
     <div className="ListItem-virtualized" style={style}>
-      <StyledItem>
+      <StyledItem onClick={() => onToggle(url)}>
         <ThumbNail />
 
         <div className="description">
-          <div className="text" onClick={onClick}></div>
+          <div className="text"></div>
           <div>{descrpition}</div>
           <div>{text}</div>
         </div>

@@ -30,17 +30,23 @@ class ViewerTemplate extends Component {
   state = { width: initSize };
   componentDidMount() {
     window.addEventListener("resize", this.resize);
+    this.playVideo();
   }
   componentWillUnmount() {
     window.removeEventListener("resize", this.resize);
   }
+
+  playVideo = () => {
+    this.refs.vidRef.play();
+  };
+
   resize = () => {
     this.setState({
       width: sizeCheck(window.innerWidth - 350)
     });
   };
   render() {
-    console.log("sdddd" + this.state.width);
+    console.log(this.props.movieURL);
     return (
       <Square>
         <Player
@@ -48,8 +54,9 @@ class ViewerTemplate extends Component {
           height={this.state.width * (9 / 16)}
           width={this.state.width}
           fluid={false}
-          src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+          src={this.props.movieURL}
           type="video/mp4"
+          ref="vidRef"
         />
       </Square>
     );

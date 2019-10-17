@@ -4,13 +4,15 @@ import styled from "styled-components";
 import { List } from "react-virtualized";
 import ListItem from "./ListItem";
 
-const ListPart = ({ lists }) => {
+const ListPart = ({ lists, onToggle }) => {
   const rowRenderer = useCallback(
     ({ index, key, style }) => {
-      const todo = lists[index];
-      return <ListItem todo={todo} key={key} style={style} />;
+      const movie = lists[index];
+      return (
+        <ListItem movie={movie} key={key} style={style} onToggle={onToggle} />
+      );
     },
-    [lists]
+    [lists, onToggle]
   );
 
   const Lists = styled.div`
