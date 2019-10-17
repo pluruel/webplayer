@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { Player } from "video-react";
-import "./ViewerTemplate.scss";
+import ReactPlayer from "react-player";
 const initSize = sizeCheck(window.innerWidth - 350);
 
 function sizeCheck(adaptedWidth) {
@@ -30,15 +29,10 @@ class ViewerTemplate extends Component {
   state = { width: initSize };
   componentDidMount() {
     window.addEventListener("resize", this.resize);
-    this.playVideo();
   }
   componentWillUnmount() {
     window.removeEventListener("resize", this.resize);
   }
-
-  playVideo = () => {
-    this.refs.vidRef.play();
-  };
 
   resize = () => {
     this.setState({
@@ -46,16 +40,14 @@ class ViewerTemplate extends Component {
     });
   };
   render() {
-    console.log(this.props.movieURL);
     return (
       <Square>
-        <Player
-          playsInline
+        <ReactPlayer
+          playing
+          controls
           height={this.state.width * (9 / 16)}
           width={this.state.width}
-          fluid={false}
-          src={this.props.movieURL}
-          type="video/mp4"
+          url={this.props.movieURL}
           ref="vidRef"
         />
       </Square>

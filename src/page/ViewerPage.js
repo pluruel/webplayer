@@ -33,23 +33,20 @@ const ViewerPage = () => {
   const [movieURL, setmovieURL] = useState();
 
   const onToggle = useCallback(url => {
-    console.log(url);
     setmovieURL(url);
   }, []);
 
   return (
-    <>
-      <PageDiv>
-        <div>
-          <ListTemplate>
-            <ListPart lists={lists} onToggle={onToggle} />
-          </ListTemplate>
-        </div>
-        <div className="ViewerTemplate">
-          <ViewerTemplate movieURL={movieURL} />
-        </div>
-      </PageDiv>
-    </>
+    <PageDiv>
+      <div>
+        <ListTemplate>
+          <ListPart lists={lists} onToggle={onToggle} />
+        </ListTemplate>
+      </div>
+      <div className="ViewerTemplate">
+        <ViewerTemplate movieURL={movieURL} />
+      </div>
+    </PageDiv>
   );
 };
 
