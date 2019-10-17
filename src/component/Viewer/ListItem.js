@@ -1,6 +1,5 @@
 import React from "react";
-import { MdAdd } from "react-icons/md";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 const ThumbNail = styled.div`
   background: black;
@@ -32,7 +31,7 @@ const StyledItem = styled.div`
   }
 `;
 const ListItem = ({ movie, onToggle, style }) => {
-  const { id, text, descrpition, url } = movie;
+  const { text, descrpition, url } = movie;
   return (
     <div className="ListItem-virtualized" style={style}>
       <StyledItem onClick={() => onToggle(url)}>
