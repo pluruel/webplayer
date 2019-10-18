@@ -1,8 +1,0 @@
-<Player
-        fluid={false}
-        width={720}
-        height={405}
-        playsInline
-        poster="/assets/poster.png"
-        src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-      />

@@ -1,16 +1,25 @@
-import React from 'react';
-import './TitleTemplate.scss';
+import React from "react";
+import "./TitleTemplate.scss";
+import ButtonNav from "./ButtonNav";
 
 const TitleTemplate = () => {
+  const items = [
+    {
+      id: 1,
+      name: "About",
+      url: "/about"
+    },
+    {
+      id: 2,
+      name: "Player",
+      url: "/player"
+    }
+  ];
+
   return (
     <div className="TitleTemplate">
-      <a>MyApp</a>
-      <nav className="MainNav">
-        <button>About</button>
-        <button>aasdfasdfM</button>
-        <button>Title</button>
-        <button>Title</button>
-      </nav>
+      <div className="title">MyApp</div>
+      <ButtonNav items={items} />
     </div>
   );
 };
