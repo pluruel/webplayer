@@ -10,7 +10,7 @@ function createLists() {
       id: 1,
       text: `Sample 1`,
       descrpition: `mmmm`,
-      url: "https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+      url: "http://192.168.0.89:4020/mov/trailer_hd.mp4"
     },
     {
       id: 2,

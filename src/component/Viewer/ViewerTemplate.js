@@ -43,6 +43,7 @@ class ViewerTemplate extends Component {
     return (
       <Square>
         <ReactPlayer
+          config={{ file: { attributes: { controlsList: "nodownload" } } }}
           playing
           controls
           height={this.state.width * (9 / 16)}
