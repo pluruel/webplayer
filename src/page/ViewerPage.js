@@ -8,9 +8,9 @@ function createLists() {
   const arr = [
     {
       id: 1,
-      text: `Sample 1`,
-      descrpition: `mmmm`,
-      url: "http://192.168.0.89:4020/mov/trailer_hd.mp4"
+      text: `DownFall`,
+      descrpition: `downfall`,
+      url: "http://175.194.27.125:3000/mov/downfall.mp4"
     },
     {
       id: 2,
